@@ -1,0 +1,38 @@
+#
+# Component ROBODoc control file 
+# 
+# L. M. Thompson 07/04/22
+#
+options:
+    --src . 
+    --doc ./doc/component
+    --singledoc 
+#    --html
+#    --latex
+#    --rtf
+    --ascii
+    --documenttitle "Component Calculator"
+    --tabsize 8
+items:
+    SYNOPSIS
+    NAME
+    COPYRIGHT
+    USAGE
+    AUTHOR
+    OPTIONS
+    NOTES
+headertypes:
+    x  "Main Program"  main 
+header markers:
+    !****
+end markers:
+    !****
+remark begin markers:
+    !*
+remark end markers:
+    !*
+remark markers:
+    !*
+source line comments:
+    !
+
