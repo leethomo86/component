@@ -32,7 +32,7 @@
       type(mqc_wavefunction)::wavefunction
       integer(kind=int64),dimension(:),allocatable::isubs,inactiveList,activeList,alphaList,betaList
       type(mqc_determinant)::determinants
-      type(mqc_vector)::subs,temp
+      type(mqc_vector)::subs
 !
 !*    USAGE
 !*      berryCalc [-f1 <matrix_file_1>] [-f2 <matrix_file_2>] [--print-level <print_level>] [--method <method>] 
@@ -245,7 +245,6 @@
 
       do i = 1, determinants%NAlpStr
         do j = 1, determinants%NBetStr
-          temp = MQC_Bit2Num_String(determinants%strings%alpha%vat([i],[0]))
           call get_nij(NIJ,pnIJ,nullSize,&
             mo_list(1)%orbitals('useStrings',MQC_Bit2Num_String(determinants%strings%alpha%vat([i],[0])),&
             MQC_Bit2Num_String(determinants%strings%beta%vat([j],[0]))),mo1,wavefunction%overlap_matrix,&
